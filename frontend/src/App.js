@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
-const api = axios.create({baseURL:process.env.REACT_APP_API_URL || 'http://localhost:8080/api'});
+const api = axios.create({
+  baseURL: process.env.REACT_APP_API_URL || 'https://shiftboard-mern.onrender.com/api'
+});
+
 
 function Login({onLogin}) {
   const [email,setEmail] = useState('');
